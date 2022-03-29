@@ -1,0 +1,58 @@
+.results {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item:first-child {
+    order: 1;
+}
+
+.item:last-child {
+    order: 2;
+}
+
+.item p {
+    font-weight: bold;
+}
+
+.winner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 3;
+    margin-top: 20px;
+}
+
+.winner p {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+    .results {
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .item:first-child {
+        order: 1;
+    }
+    
+    .item:last-child {
+        order: 3;
+    }
+    
+    .winner {
+        order: 2;
+        margin: 0 40px;
+    }
+}

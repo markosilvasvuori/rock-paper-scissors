@@ -1,0 +1,24 @@
+.button {
+    padding: 10px 25px;
+    border-radius: 12px;
+    font-weight: bold;
+    border: 4px solid #f8f8f8;
+    background-color: transparent;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+.button:hover {
+    border-color: #d4d2d2;
+}
+
+.button.bg:hover {
+    background-color: #d4d2d2;
+}
+
+.bg {
+    background-color: #f8f8f8;
+    color: #222;
+}

@@ -1,0 +1,29 @@
+.item {
+    width: 125px;
+    height: 125px;
+    margin: 0 20px;
+    border: 14px solid #a2a8d3;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    box-shadow: inset 8px 12px 20px rgba(0, 0, 0, .7);
+    transition: all .2s ease-out;
+}
+
+.item:hover {
+    transform: scale(1.1);
+    box-shadow: inset 8px 12px 20px rgba(0, 0, 0, .7), 
+                4px 20px 35px rgba(0, 0, 0, .29);
+}
+
+.item:last-child {
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .item {
+        width: 180px;
+        height: 180px;
+    }
+}
