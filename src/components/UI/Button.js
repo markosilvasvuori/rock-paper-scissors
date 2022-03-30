@@ -2,7 +2,9 @@ import classes from './Button.module.css';
 
 const Button = (props) => {
     const styles = `
-        ${classes.button} ${props.background ? classes.bg : ''}`;
+        ${classes.button}
+        ${props.className ? props.className : ''}
+    `;
 
     return (
         <button 
