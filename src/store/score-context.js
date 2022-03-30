@@ -18,11 +18,17 @@ export const ScoreProvider = (props) => {
         });
     }
 
+    const resetGame = () => {
+        setPlayerScore(0);
+        setComputerScore(0);
+    };
+
     const ctxValue = {
         playerScore: playerScore,
         computerScore: computerScore,
         incrementPlayerScore: incrementPlayerScore,
         incrementComputerScore: incrementComputerScore,
+        resetGame: resetGame,
     }
 
     return (
