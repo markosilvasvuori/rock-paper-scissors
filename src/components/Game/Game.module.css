@@ -1,8 +1,14 @@
 .game {
+    position: relative;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 330px;
+}
+
+.reset {
+    position: absolute;
+    bottom: -150px;
 }
 
 @media screen and (min-width: 768px) {
