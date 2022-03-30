@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 
+import { ScoreContext } from '../../store/score-context';
 import RockImg from '../../img/rock.jpg';
 import PaperImg from '../../img/paper.jpg';
 import ScissorsImg from '../../img/scissors.jpg';
@@ -7,8 +8,10 @@ import Item from './Item';
 import Results from './Results';
 
 import classes from './Game.module.css';
+import Button from '../UI/Button';
 
 const Game = () => {
+    const {ctxValue} = useContext(ScoreContext);
     const [playerSelectedItem, setPlayerSelectedItem] = useState('');
     const [computerSelectedItem, setComputerSelectedItem] = useState('');
 
@@ -50,6 +53,14 @@ const Game = () => {
                     />
                 )
             )}
+            {!playerSelectedItem && 
+                <Button 
+                    className={classes.reset}
+                    onClick={ctxValue.resetGame}
+                >
+                    Reset Game
+                </Button>
+            }
             {playerSelectedItem && 
                 <Results 
                     playerSelectedItem={playerSelectedItem} 
