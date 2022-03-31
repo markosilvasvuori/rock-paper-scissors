@@ -11,7 +11,8 @@
     transition: all .2s ease-out;
 }
 
-.item:hover {
+.item:hover,
+.item:active {
     transform: scale(1.1);
     box-shadow: inset 8px 12px 20px rgba(0, 0, 0, .7), 
                 4px 20px 35px rgba(0, 0, 0, .29);
