@@ -30,7 +30,7 @@ const Game = () => {
         },
     ];
 
-    const onClickHandler = (event) => {
+    const onSelectHandler = (event) => {
         const randomIndex = Math.floor(Math.random() * 3);
 
         setPlayerSelectedItem(items.find(item => item.name === event.target.id));
@@ -49,7 +49,7 @@ const Game = () => {
                         key={item.name} 
                         name={item.name}
                         img={item.img}
-                        onClick={onClickHandler}
+                        onSelect={onSelectHandler}
                     />
                 )
             )}
