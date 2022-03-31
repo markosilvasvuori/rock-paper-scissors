@@ -8,7 +8,7 @@
 
 .reset {
     position: absolute;
-    bottom: -150px;
+    bottom: -80px;
 }
 
 @media screen and (min-width: 768px) {
