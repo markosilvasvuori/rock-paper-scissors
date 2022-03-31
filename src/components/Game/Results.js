@@ -17,15 +17,15 @@ const Results = ({ playerSelectedItem, computerSelectedItem, playAgain }) => {
             if ((playerSelectedItem.name === 'rock' && computerSelectedItem.name === 'scissors') ||
                 (playerSelectedItem.name === 'paper' && computerSelectedItem.name === 'rock') ||
                 (playerSelectedItem.name === 'scissors' && computerSelectedItem.name === 'paper')) {
-                setWinner(playerWon);
                 ctxValue.incrementPlayerScore();
+                setWinner(playerWon);
             }
 
             if ((playerSelectedItem.name === 'rock' && computerSelectedItem.name === 'paper') ||
                 (playerSelectedItem.name === 'paper' && computerSelectedItem.name === 'scissors') ||
                 (playerSelectedItem.name === 'scissors' && computerSelectedItem.name === 'rock')) {
-                setWinner(computerWon);
                 ctxValue.incrementComputerScore();
+                setWinner(computerWon);
             }
 
             if (playerSelectedItem.name === computerSelectedItem.name) {
