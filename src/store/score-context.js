@@ -1,6 +1,12 @@
 import { createContext, useState } from 'react';
 
-export const ScoreContext = createContext();
+export const ScoreContext = createContext({
+    playerScore: 0,
+    computerScore: 0,
+    incrementPlayerScore: () => {},
+    incrementComputerScore: () => {},
+    resetGame: () => {},
+});
 
 export const ScoreProvider = (props) => {
     const [playerScore, setPlayerScore] = useState(0);
